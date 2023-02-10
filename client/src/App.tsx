@@ -98,12 +98,25 @@ function App() {
           catchAll={<ErrorComponent />}
           resources={[
             {
-              name: "posts",
-              list: MuiInferencer,
-              edit: MuiInferencer,
-              show: MuiInferencer,
-              create: MuiInferencer,
-              canDelete: true,
+              name: "Property",
+              list: MuiInferencer
+            },
+            {
+              name: "Agent",
+              list: MuiInferencer
+            },
+            {
+              name: "Review",
+              list: MuiInferencer
+            },
+            {
+              name: "Message",
+              list: MuiInferencer
+            },
+            {
+              name: "My-Profile",
+              options: { label: "My Profile " },
+              list: MuiInferencer
             },
           ]}
           Title={Title}
