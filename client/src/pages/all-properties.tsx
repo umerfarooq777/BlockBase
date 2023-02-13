@@ -58,7 +58,7 @@ const AllProperties = () => {
         <Box>
             <Box mt="0px" sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
                 <Stack direction="column" width="100%">
-                    <Typography fontSize={25} fontWeight={700} color="#11142d">
+                    <Typography fontSize={20} fontWeight={700} color="#11142d">
                     All Properties
                         {/* {!allProperties.length
                             ? "There are no properties"
@@ -66,9 +66,9 @@ const AllProperties = () => {
                     </Typography>
                     <Box
                         mb={2}
-                        mt={3}
+                        mt={2}
                         display="flex"
-                        width="84%"
+                        width="100%"
                         justifyContent="space-between"
                         flexWrap="wrap"
                     >

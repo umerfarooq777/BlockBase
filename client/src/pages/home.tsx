@@ -25,7 +25,7 @@ const Home = () => {
 
     return (
         <Box>
-            <Typography fontSize={25} fontWeight={700} color="#11142D">
+            <Typography fontSize={20} fontWeight={700} color="#11142D">
                 Dashboard
             </Typography>
 
