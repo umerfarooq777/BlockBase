@@ -5,9 +5,12 @@ import { FieldValues, useForm } from "@pankod/refine-react-hook-form";
 import Form from "components/common/Form";
 
 const CreateProperty = () => {
+
+
+    const [property,setProperty] = useState();
+
     const { data: user } = useGetIdentity();
-    // console.log("🚀 ~ file: create-property.tsx:9 ~ CreateProperty ~ user", user)
-    
+
     const [propertyImage, setPropertyImage] = useState({ name: "", url: "" });
     const {
         refineCore: { onFinish, formLoading },
@@ -28,15 +31,23 @@ const CreateProperty = () => {
         );
     };
 
+
+
     const onFinishHandler = async (data: FieldValues) => {
         if (!propertyImage.name) return alert("Please select an image");
-
-        await onFinish({
+            await onFinish(
+            {
             ...data,
             photo: propertyImage.url,
             email: user.email,
-        });
+            }        
+        );
+
+        
     };
+
+    
+   
 
     return (
         <Form

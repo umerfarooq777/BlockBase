@@ -49,7 +49,7 @@ const Form = ({
                                 color: "#11142d",
                             }}
                         >
-                            Enter property name
+                            Enter Property name
                         </FormHelperText>
                         <TextField
                             fullWidth
