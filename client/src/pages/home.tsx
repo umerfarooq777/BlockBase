@@ -25,11 +25,11 @@ const Home = () => {
 
     return (
         <Box>
-            <Typography fontSize={25} fontWeight={700} color="#11142D">
+            <Typography fontSize={20} fontWeight={700} color="#11142D">
                 Dashboard
             </Typography>
 
-            <Box mt="20px" display="flex" flexWrap="wrap" gap={4}>
+            <Box mt="10px" display="flex" flexWrap="wrap" gap={2}>
                 <PieChart
                     title="Properties for Sale"
                     value={684}
@@ -57,7 +57,7 @@ const Home = () => {
             </Box>
 
             <Stack
-                mt="25px"
+                mt="20px"
                 width="100%"
                 direction={{ xs: "column", lg: "row" }}
                 gap={4}

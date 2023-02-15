@@ -253,18 +253,21 @@ export const Sider: typeof DefaultSider = ({ render }) => {
                         py: 1,
                         "&.Mui-selected": {
                             "&:hover": {
-                                backgroundColor: "transparent",
+                                backgroundColor: "#1e36e8",
                             },
-                            backgroundColor: "transparent",
+                            backgroundColor: "#475BE8",
+                            color:"#fff"
                         },
                         justifyContent: "center",
+                        borderRadius:"10px",
+                        margin:"5px 10px"
                     }}
                 >
                     <ListItemIcon
                         sx={{
                             justifyContent: "center",
-                            minWidth: 36,
-                            color: "#808191",
+                            minWidth: 36,                           
+                            color: selectedKey === "/" ? "#fff" : "#808191",
                             marginLeft: "6px",
                             marginRight: "14px",
                         }}
@@ -276,7 +279,7 @@ export const Sider: typeof DefaultSider = ({ render }) => {
                         primaryTypographyProps={{
                             noWrap: true,
                             fontSize: "16px",
-                            fontWeight: selectedKey === "/" ? "bold" : "normal",
+                            fontWeight: selectedKey === "/" ? "bold" : "normal", 
                         }}
                     />
                 </ListItemButton>
@@ -380,7 +383,7 @@ export const Sider: typeof DefaultSider = ({ render }) => {
                         display: { sm: "block", md: "none" },
                         "& .MuiDrawer-paper": {
                             width: 256,
-                            bgcolor: "#FCFCFC",
+                            bgcolor: "#ffff",
                         },
                     }}
                 >
@@ -435,13 +438,14 @@ export const Sider: typeof DefaultSider = ({ render }) => {
                             background: "#475BE8",
                             color: "primary.contrastText",
                             textAlign: "center",
-                            borderRadius: 0,
+                            borderRadius: "10px",
+                            margin:"5px 5px",
                             borderTop: "1px solid #ffffff1a",
                             "&:hover": {
                                 background: "#1e36e8",
                             },
                         }}
-                        fullWidth
+                        
                         size="large"
                         onClick={() => setCollapsed((prev) => !prev)}
                     >
@@ -452,7 +456,7 @@ export const Sider: typeof DefaultSider = ({ render }) => {
                     sx={{
                         display: { xs: "block", md: "none" },
                         position: "fixed",
-                        top: "64px",
+                        top: "12px",
                         left: "0px",
                         borderRadius: "0 6px 6px 0",
                         bgcolor: "#475be8",

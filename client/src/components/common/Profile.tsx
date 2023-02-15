@@ -12,11 +12,11 @@ function checkImage(url: any) {
 
 const Profile = ({ type, name, avatar, email, properties }: ProfileProps) => (
     <Box>
-        <Typography fontSize={25} fontWeight={700} color="#11142D">
+        <Typography fontSize={20} fontWeight={700} color="#11142D">
             {type} Profile
         </Typography>
 
-        <Box mt="20px" borderRadius="15px" padding="20px" bgcolor="#FCFCFC">
+        <Box mt="10px" borderRadius="15px" padding="20px" bgcolor="#FCFCFC">
             <Box
                 sx={{
                     display: "flex",
@@ -25,16 +25,21 @@ const Profile = ({ type, name, avatar, email, properties }: ProfileProps) => (
                 }}
             >
                 <img
-                    src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+                    // src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+                    src={
+                        checkImage(avatar)
+                            ? avatar
+                            : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png"
+                    }
                     width={340}
-                    height={320}
+                    height={370}
                     alt="abstract"
                     className="my_profile-bg"
                 />
                 <Box
                     flex={1}
                     sx={{
-                        marginTop: { md: "58px" },
+                        marginTop: { md: "20px" },
                         marginLeft: { xs: "20px", md: "0px" },
                     }}
                 >
@@ -50,8 +55,8 @@ const Profile = ({ type, name, avatar, email, properties }: ProfileProps) => (
                                     ? avatar
                                     : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png"
                             }
-                            width={78}
-                            height={78}
+                            width={200}
+                            height={200}
                             alt="user_profile"
                             className="my_profile_user-img"
                         />
@@ -61,7 +66,7 @@ const Profile = ({ type, name, avatar, email, properties }: ProfileProps) => (
                             display="flex"
                             flexDirection="column"
                             justifyContent="space-between"
-                            gap="30px"
+                            gap="20px"
                         >
                             <Stack direction="column">
                                 <Typography
@@ -101,8 +106,55 @@ const Profile = ({ type, name, avatar, email, properties }: ProfileProps) => (
                                         </Typography>
                                     </Box>
                                 </Stack>
+                                <Stack flex={1} gap="15px">
+                                        <Typography
+                                            fontSize={14}
+                                            fontWeight={500}
+                                            color="#808191"
+                                        >
+                                            Phone Number
+                                        </Typography>
+                                        <Box
+                                            display="flex"
+                                            flexDirection="row"
+                                            alignItems="center"
+                                            gap="10px"
+                                        >
+                                            <Phone sx={{ color: "#11142D" }} />
+                                            <Typography
+                                                fontSize={14}
+                                                color="#11142D"
+                                                noWrap
+                                            >
+                                                +0123 456 7890
+                                            </Typography>
+                                        </Box>
+                                    </Stack>
+                                    <Stack flex={1} gap="15px">
+                                        <Typography
+                                            fontSize={14}
+                                            fontWeight={500}
+                                            color="#808191"
+                                        >
+                                            Email
+                                        </Typography>
+                                        <Box
+                                            display="flex"
+                                            flexDirection="row"
+                                            alignItems="center"
+                                            gap="10px"
+                                        >
+                                            <Email sx={{ color: "#11142D" }} />
+                                            <Typography
+                                                fontSize={14}
+                                                color="#11142D"
+                                            >
+                                                {email}
+                                            </Typography>
+                                        </Box>
+                                    </Stack>
 
-                                <Stack
+                                {/* <Stack
                                     direction="row"
                                     flexWrap="wrap"
                                     gap="20px"
@@ -133,6 +185,14 @@ const Profile = ({ type, name, avatar, email, properties }: ProfileProps) => (
                                         </Box>
                                     </Stack>
 
+                                    
+                                </Stack>
+                                <Stack
+                                    direction="row"
+                                    flexWrap="wrap"
+                                    gap="20px"
+                                    pb={4}
+                                >
                                     <Stack flex={1} gap="15px">
                                         <Typography
                                             fontSize={14}
@@ -156,7 +216,9 @@ const Profile = ({ type, name, avatar, email, properties }: ProfileProps) => (
                                             </Typography>
                                         </Box>
                                     </Stack>
-                                </Stack>
+
+                                    
+                                </Stack> */}
                             </Stack>
                         </Box>
                     </Box>

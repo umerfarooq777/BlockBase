@@ -66,7 +66,7 @@ const PropertyDetails = () => {
             bgcolor="#FCFCFC"
             width="fit-content"
         >
-            <Typography fontSize={25} fontWeight={700} color="#11142D">
+            <Typography fontSize={20} fontWeight={700} color="#11142D">
                 Details
             </Typography>
 
@@ -154,7 +154,7 @@ const PropertyDetails = () => {
                                     gap={1}
                                 >
                                     <Typography
-                                        fontSize={25}
+                                        fontSize={20}
                                         fontWeight={700}
                                         color="#475BE8"
                                     >

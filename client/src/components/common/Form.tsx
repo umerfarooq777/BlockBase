@@ -25,7 +25,7 @@ const Form = ({
 }: FormProps) => {
     return (
         <Box>
-            <Typography fontSize={25} fontWeight={700} color="#11142d">
+            <Typography fontSize={20} fontWeight={700} color="#11142d">
                 {type} a Property
             </Typography>
 
