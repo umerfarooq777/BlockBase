@@ -9,27 +9,27 @@ import {
 } from "components";
 
 const Home = () => {
-    // const { data, isLoading, isError } = useList({
-    //     resource: "properties",
-    //     config: {
-    //         pagination: {
-    //             pageSize: 4,
-    //         },
-    //     },
-    // });
+    const { data, isLoading, isError } = useList({
+        resource: "properties",
+        config: {
+            pagination: {
+                pageSize: 4,
+            },
+        },
+    });
 
-    // const latestProperties = data?.data ?? [];
+    const latestProperties = data?.data ?? [];
 
-    // if (isLoading) return <Typography>Loading...</Typography>;
-    // if (isError) return <Typography>Something went wrong!</Typography>;
+    if (isLoading) return <Typography>Loading...</Typography>;
+    if (isError) return <Typography>Something went wrong!</Typography>;
 
     return (
         <Box>
-            <Typography fontSize={20} fontWeight={700} color="#11142D">
+            <Typography fontSize={25} fontWeight={700} color="#11142D">
                 Dashboard
             </Typography>
 
-            <Box mt="10px" display="flex" flexWrap="wrap" gap={4}>
+            <Box mt="20px" display="flex" flexWrap="wrap" gap={4}>
                 <PieChart
                     title="Properties for Sale"
                     value={684}
@@ -57,7 +57,7 @@ const Home = () => {
             </Box>
 
             <Stack
-                mt="20px"
+                mt="25px"
                 width="100%"
                 direction={{ xs: "column", lg: "row" }}
                 gap={4}
@@ -66,7 +66,7 @@ const Home = () => {
                 <PropertyReferrals />
             </Stack>
 
-            {/* <Box
+            <Box
                 flex={1}
                 borderRadius="15px"
                 padding="20px"
@@ -95,7 +95,7 @@ const Home = () => {
                         />
                     ))}
                 </Box>
-            </Box> */}
+            </Box>
         </Box>
     );
 };

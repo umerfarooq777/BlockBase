@@ -32,13 +32,10 @@
 </div>
 
 
-# Build and Deploy a Full Stack MERN Dashboard App With CRUD, Auth, and Charts Using Refine - Client App
+# Full Stack MERN Dashboard App Using Refine - Server App
+![app_cover](https://user-images.githubusercontent.com/18739364/218060605-19c3e8cd-75e9-4afd-a796-d4801237c0fe.png)
 
-![app_cover](https://user-images.githubusercontent.com/18739364/218060209-b0119d40-5c9c-48d0-b96b-ec802816ab50.png)
-
-
-
-[Refer to the server app source code](https://github.com/refinedev/refine/tree/master/examples/mern-dashboard-server)
+[Refer to the client app source code](https://github.com/refinedev/refine/tree/master/examples/mern-dashboard-client)
 
 
 
@@ -61,7 +58,5 @@ Launch your development career with project-based coaching - [JS Mastery Pro](ht
 ## Try it out on your local
 
 ```bash
-npm create refine-app@latest -- --example mern-dashboard-client
+npm create refine-app@latest -- --example mern-dashboard-server
 ```
-
-

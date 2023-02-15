@@ -6,7 +6,7 @@ import {
     getAllProperties,
     getPropertyDetail,
     updateProperty,
-} from "../controllers/property.controllers.js";
+} from "../controllers/property.controller.js";
 
 const router = express.Router();
 

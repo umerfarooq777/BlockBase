@@ -24,8 +24,8 @@ const Form = ({
     propertyImage,
 }: FormProps) => {
     return (
-        <Box  >
-            <Typography fontSize={20} fontWeight={700} color="#11142d">
+        <Box>
+            <Typography fontSize={25} fontWeight={700} color="#11142d">
                 {type} a Property
             </Typography>
 
@@ -45,11 +45,11 @@ const Form = ({
                             sx={{
                                 fontWeight: 500,
                                 margin: "10px 0",
-                                fontSize: 14,
+                                fontSize: 16,
                                 color: "#11142d",
                             }}
                         >
-                            Enter Property name
+                            Enter property name
                         </FormHelperText>
                         <TextField
                             fullWidth
@@ -65,24 +65,21 @@ const Form = ({
                             sx={{
                                 fontWeight: 500,
                                 margin: "10px 0",
-                                fontSize: 14,
+                                fontSize: 16,
                                 color: "#11142d",
                             }}
                         >
                             Enter Description
                         </FormHelperText>
-                       
                         <TextareaAutosize
-                        
                             minRows={5}
-                            maxRows={5}
                             required
                             placeholder="Write description"
                             color="info"
                             style={{
                                 width: "100%",
                                 background: "transparent",
-                                fontSize: "14px",
+                                fontSize: "16px",
                                 borderColor: "rgba(0,0,0,0.23)",
                                 borderRadius: 6,
                                 padding: 10,
@@ -93,13 +90,12 @@ const Form = ({
                     </FormControl>
 
                     <Stack direction="row" gap={4}>
-
-                        <FormControl sx={{ flex: 1 }}   >
+                        <FormControl sx={{ flex: 1 }}>
                             <FormHelperText
                                 sx={{
                                     fontWeight: 500,
                                     margin: "10px 0",
-                                    fontSize: 14,
+                                    fontSize: 16,
                                     color: "#11142d",
                                 }}
                             >
@@ -126,15 +122,13 @@ const Form = ({
                                 <MenuItem value="chalet">Chalet</MenuItem>
                             </Select>
                         </FormControl>
-
-                        <FormControl sx={{ flex:1}}>
+                        <FormControl>
                             <FormHelperText
                                 sx={{
                                     fontWeight: 500,
                                     margin: "10px 0",
-                                    fontSize: 14,
+                                    fontSize: 16,
                                     color: "#11142d",
-                                    
                                 }}
                             >
                                 Enter property price
@@ -149,7 +143,6 @@ const Form = ({
                                 {...register("price", { required: true })}
                             />
                         </FormControl>
-
                     </Stack>
 
                     <FormControl>
@@ -157,7 +150,7 @@ const Form = ({
                             sx={{
                                 fontWeight: 500,
                                 margin: "10px 0",
-                                fontSize: 14,
+                                fontSize: 16,
                                 color: "#11142d",
                             }}
                         >
@@ -182,7 +175,7 @@ const Form = ({
                         <Stack direction="row" gap={2}>
                             <Typography
                                 color="#11142d"
-                                fontSize={14}
+                                fontSize={16}
                                 fontWeight={500}
                                 my="10px"
                             >
@@ -193,10 +186,9 @@ const Form = ({
                                 component="label"
                                 sx={{
                                     width: "fit-content",
-                                    borderRadius:"10px",
-                                    color: "#475be8",
+                                    color: "#2ed480",
                                     textTransform: "capitalize",
-                                    fontSize: 14,
+                                    fontSize: 16,
                                 }}
                             >
                                 Upload *
@@ -213,7 +205,7 @@ const Form = ({
                             </Button>
                         </Stack>
                         <Typography
-                            fontSize={12}
+                            fontSize={14}
                             color="#808191"
                             sx={{ wordBreak: "break-all" }}
                         >

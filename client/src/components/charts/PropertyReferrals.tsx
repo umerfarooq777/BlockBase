@@ -1,4 +1,4 @@
-import { Box, Collapse, Stack, Typography } from "@pankod/refine-mui";
+import { Box, Stack, Typography } from "@pankod/refine-mui";
 
 import { propertyReferralsInfo } from "constants/index";
 
@@ -30,9 +30,7 @@ const ProgressBar = ({ title, percentage, color }: ProgressBarProps) => (
             borderRadius={1}
             bgcolor="#e4e8ef"
         >
-            
-          <Box
-                
+            <Box
                 width={`${percentage}%`}
                 bgcolor={color}
                 position="absolute"
@@ -49,8 +47,7 @@ const PropertyReferrals = () => {
             p={4}
             bgcolor="#fcfcfc"
             id="chart"
-            minWidth={390}
-            // minWidth="40%"
+            minWidth={490}
             display="flex"
             flexDirection="column"
             borderRadius="15px"
