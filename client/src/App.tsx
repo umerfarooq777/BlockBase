@@ -39,6 +39,9 @@ import {
   EditProperty,
 } from "./pages";
 
+import CreateProperty1 from "pages/create-property.jsx";
+
+
 const axiosInstance = axios.create();
 axiosInstance.interceptors.request.use((request: AxiosRequestConfig) => {
   const token = localStorage.getItem("token");
