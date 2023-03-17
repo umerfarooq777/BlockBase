@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { useLogin } from "@pankod/refine-core";
 import { Container, Box } from "@pankod/refine-mui";
 
-import { yariga } from "../assets";
+import {BlockBaseLogo2} from "../assets/index";
 
 import { CredentialResponse } from "../interfaces/google";
 
@@ -33,7 +33,7 @@ export const Login: React.FC = () => {
                 });
                 window.google.accounts.id.renderButton(divRef.current, {
                     theme: "filled_blue",
-                    size: "medium",
+                    size: "large",
                     type: "standard",
                 });
             } catch (error) {
@@ -45,7 +45,8 @@ export const Login: React.FC = () => {
     };
 
     return (
-        <Box component="div" sx={{ backgroundColor: "#FCFCFC" }}>
+        // <Box component="div" className="bgGrad" sx={{ backgroundColor: "#475ae8b5" }}>
+        <Box component="div" className="bgGrad" >
             <Container
                 component="main"
                 maxWidth="xs"
@@ -65,7 +66,7 @@ export const Login: React.FC = () => {
                     }}
                 >
                     <div>
-                        <img src={yariga} alt="Yariga Logo" />
+                    <img src={BlockBaseLogo2} alt="BlockBase" width="700px" />
                     </div>
                     <Box mt={4}>
                         <GoogleButton />

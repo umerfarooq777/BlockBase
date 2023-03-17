@@ -1,3 +1,4 @@
+import { Image } from "@mui/icons-material";
 import {
     Box,
     Typography,
@@ -13,6 +14,9 @@ import {
 
 import { FormProps } from "interfaces/common";
 import CustomButton from "./CustomButton";
+import block from "../../assets/logo mini.png"
+import { PropertyCard } from "components";
+import { useState } from 'react';
 
 const Form = ({
     type,
@@ -23,6 +27,25 @@ const Form = ({
     onFinishHandler,
     propertyImage,
 }: FormProps) => {
+
+    
+  const [name, setName] = useState('');
+  const [price, setPrice] = useState('');
+  const [location, setLocation] = useState('');
+
+
+    const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setName(event.target.value);
+      };
+    const handlePriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setPrice(event.target.value);
+      };
+    const handleLocaionChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setLocation(event.target.value);
+      };
+
+
+    // console.log({...register})
     return (
         <Box>
             <Typography fontSize={20} fontWeight={700} color="#11142d">
@@ -58,6 +81,7 @@ const Form = ({
                             color="info"
                             variant="outlined"
                             {...register("title", { required: true })}
+                            onChange={handleNameChange}
                         />
                     </FormControl>
                     <FormControl>
@@ -141,6 +165,8 @@ const Form = ({
                                 type="number"
                                 variant="outlined"
                                 {...register("price", { required: true })}
+                                
+                            onChange={handlePriceChange}
                             />
                         </FormControl>
                     </Stack>
@@ -163,6 +189,8 @@ const Form = ({
                             color="info"
                             variant="outlined"
                             {...register("location", { required: true })}
+                            
+                            onChange={handleLocaionChange}
                         />
                     </FormControl>
 
@@ -211,6 +239,13 @@ const Form = ({
                         >
                             {propertyImage?.name}
                         </Typography>
+                         <PropertyCard
+                        id={register._id}
+                        title={name?name:"Tite here"}
+                        location={location?location:"BlockBase"}
+                        price={price?price:"00"}
+                        photo={propertyImage.url?propertyImage.url:block}
+                    />
                     </Stack>
 
                     <CustomButton

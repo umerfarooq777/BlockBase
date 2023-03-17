@@ -97,7 +97,7 @@ const CreateProperty1 = () => {
     return (
 
         <Box  >
-            <Typography fontSize={20} fontWeight={700} color="#11142d">
+            <Typography fontSize={25} fontWeight={900} color="#11142d">
                Create a Property
             </Typography>
 

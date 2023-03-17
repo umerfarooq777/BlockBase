@@ -35,8 +35,10 @@ import {
     CreateProperty,
     AgentProfile,
     EditProperty,
+    Chat,
+    Reviews
 } from "pages";
-
+const SERVER_BASE_URL = process.env.SERVER_BASE_URL
 const axiosInstance = axios.create();
 axiosInstance.interceptors.request.use((request: AxiosRequestConfig) => {
     const token = localStorage.getItem("token");
@@ -149,12 +151,12 @@ function App() {
                         },
                         {
                             name: "reviews",
-                            list: Home,
+                            list: Reviews,
                             icon: <StarOutlineRounded />,
                         },
                         {
                             name: "messages",
-                            list: Home,
+                            list: Chat,
                             icon: <ChatBubbleOutline />,
                         },
                         {

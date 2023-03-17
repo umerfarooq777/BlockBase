@@ -66,7 +66,7 @@ const PropertyDetails = () => {
             bgcolor="#FCFCFC"
             width="fit-content"
         >
-            <Typography fontSize={20} fontWeight={700} color="#11142D">
+            <Typography fontSize={25} fontWeight={900} color="#11142D">
                 Details
             </Typography>
 
@@ -317,6 +317,9 @@ const PropertyDetails = () => {
                             title="Book Now"
                             backgroundColor="#475BE8"
                             color="#FCFCFC"
+                            handleClick={()=>{
+                                alert("In progress")
+                            }}
                             fullWidth
                         />
                     </Box>

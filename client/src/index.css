@@ -5,7 +5,11 @@
 a {
   text-decoration: none !important;
 }
+.bgGrad{
+  background: rgb(71,91,232);
+background: linear-gradient(90deg, rgba(71,91,232,1) 0%, rgb(255, 255, 255) 35%, rgb(255, 255, 255) 50%, rgb(244, 244, 244) 65%, rgba(71,91,232,1) 100%);
 
+}
 .my_profile-bg {
   width: 340px;
   border-radius: 15px;
