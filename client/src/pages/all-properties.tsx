@@ -58,7 +58,7 @@ const AllProperties = () => {
         <Box>
             <Box mt="20px" sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
                 <Stack direction="column" width="100%">
-                    <Typography fontSize={20} fontWeight={700} color="#11142d">
+                    <Typography fontSize={25} fontWeight={900} color="#11142d">
                         {!allProperties.length
                             ? "There are no properties"
                             : "All Properties"}
@@ -178,10 +178,10 @@ const AllProperties = () => {
                 <Box display="flex" gap={2} mt={3} flexWrap="wrap">
                     <CustomButton
                         title="Previous"
-                        handleClick={() => setCurrent((prev) => prev - 1)}
+                        // handleClick={() => setCurrent((prev) =>  prev - 1)}
                         backgroundColor="#475be8"
                         color="#fcfcfc"
-                        disabled={!(current > 1)}
+                        // disabled={!(current > 1)}
                     />
                     <Box
                         display={{ xs: "hidden", sm: "flex" }}
@@ -195,10 +195,11 @@ const AllProperties = () => {
                     </Box>
                     <CustomButton
                         title="Next"
-                        handleClick={() => setCurrent((prev) => prev + 1)}
+                        // handleClick={() => setCurrent((prev) => prev + 1)}
                         backgroundColor="#475be8"
                         color="#fcfcfc"
-                        disabled={current === pageCount}
+                        
+                        // disabled={current === pageCount}
                     />
                     <Select
                         variant="outlined"

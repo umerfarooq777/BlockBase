@@ -37,6 +37,8 @@ import {
 import { Title as DefaultTitle } from "../title";
 
 export const Sider: typeof DefaultSider = ({ render }) => {
+
+
     const [collapsed, setCollapsed] = useState(false);
     const [opened, setOpened] = useState(false);
 
@@ -260,7 +262,9 @@ export const Sider: typeof DefaultSider = ({ render }) => {
                         },
                         justifyContent: "center",
                         borderRadius:"10px",
-                        margin:"5px 10px"
+                        margin:"5px 10px",                        
+                        minHeight: "56px",
+                        width: "90%",
                     }}
                 >
                     <ListItemIcon
@@ -354,7 +358,9 @@ export const Sider: typeof DefaultSider = ({ render }) => {
     return (
         <>
             <Box
+
                 sx={{
+                   
                     width: { xs: drawerWidth() },
                     display: {
                         xs: "none",

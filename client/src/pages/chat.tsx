@@ -8,7 +8,8 @@ import {
     PropertyCard,
 } from "components";
 
-const Home = () => {
+import MessageMockup from "../assets/Message.png"
+const Chat = () => {
     const { data, isLoading, isError } = useList({
         resource: "properties",
         config: {
@@ -25,11 +26,26 @@ const Home = () => {
 
     return (
         <Box>
-            <Typography fontSize={25} fontWeight={900} color="#11142D">
-                Dashboard
+            <Typography fontSize={20} fontWeight={700} color="#11142D">
+                Messages
             </Typography>
 
-            <Box mt="10px" display="flex" flexWrap="wrap" gap={2}>
+            
+            <Box
+                flex={1}
+                borderRadius="15px"
+                padding="20px"
+                bgcolor="#fcfcfc"
+                display="flex"
+                flexDirection="column"
+                minWidth="100%"
+                mt="5px"
+            >
+               
+               <img src={MessageMockup}/>
+            </Box>
+
+            {/* <Box mt="10px" display="flex" flexWrap="wrap" gap={2}>
                 <PieChart
                     title="Properties for Sale"
                     value={684}
@@ -95,9 +111,9 @@ const Home = () => {
                         />
                     ))}
                 </Box>
-            </Box>
+            </Box> */}
         </Box>
     );
 };
 
-export default Home;
+export default Chat;

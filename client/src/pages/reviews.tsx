@@ -8,7 +8,7 @@ import {
     PropertyCard,
 } from "components";
 
-const Home = () => {
+const Reviews = () => {
     const { data, isLoading, isError } = useList({
         resource: "properties",
         config: {
@@ -25,11 +25,11 @@ const Home = () => {
 
     return (
         <Box>
-            <Typography fontSize={25} fontWeight={900} color="#11142D">
-                Dashboard
+            <Typography fontSize={20} fontWeight={700} color="#11142D">
+            Reviews
             </Typography>
 
-            <Box mt="10px" display="flex" flexWrap="wrap" gap={2}>
+            {/* <Box mt="10px" display="flex" flexWrap="wrap" gap={2}>
                 <PieChart
                     title="Properties for Sale"
                     value={684}
@@ -65,7 +65,7 @@ const Home = () => {
                 <TotalRevenue />
                 <PropertyReferrals />
             </Stack>
-
+*/}
             <Box
                 flex={1}
                 borderRadius="15px"
@@ -95,9 +95,9 @@ const Home = () => {
                         />
                     ))}
                 </Box>
-            </Box>
+            </Box> 
         </Box>
     );
 };
 
-export default Home;
+export default Reviews;
